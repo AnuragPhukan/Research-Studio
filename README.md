@@ -76,6 +76,6 @@ python main.py
 
 ## Screenshots
 
-![UI Preview 1](assets/Screenshot-1.svg)
+![UI Preview 1](assets/Screenshot-1.png)
 
-![UI Preview 2](assets/Screenshot-2.svg)
+![UI Preview 2](assets/Screenshot-2.png)
