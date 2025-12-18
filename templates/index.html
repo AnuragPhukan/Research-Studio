@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Research Studio</p>
+          <h1>Turn a question into a structured research report.</h1>
+          <p class="subhead">
+            Powered by your tools, designed for clarity. Generate a report and optionally
+            save it as <span>output.txt</span>.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="chip">Sources</div>
+          <div class="chip">Tools Used</div>
+          <div class="chip">Cohesive Narrative</div>
+          <div class="chip">Downloadable</div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel form-panel">
+          <h2>Ask a research question</h2>
+          <form method="post">
+            <label for="query">Research query</label>
+            <textarea id="query" name="query" rows="5" placeholder="e.g., Climate change impacts on polar bear populations">{{ query }}</textarea>
+            <div class="form-row">
+              <button type="submit">Generate report</button>
+            </div>
+          </form>
+          {% if error %}
+            <p class="error">{{ error }}</p>
+          {% endif %}
+        </section>
+
+        <section class="panel result-panel">
+          <div class="result-header">
+            <h2>Report</h2>
+            {% if saved and filename %}
+              <a class="download" href="{{ url_for('download', filename=filename) }}">Download report</a>
+            {% endif %}
+          </div>
+
+          {% if data %}
+            <div class="result-topic">
+              <span>Topic</span>
+              <strong>{{ data.topic }}</strong>
+            </div>
+            <div class="report">
+              {{ data.report | replace('\n', '<br>') | safe }}
+            </div>
+
+            <div class="lists single">
+              <div>
+                <h3>References</h3>
+                {% if data.sources %}
+                  <ul>
+                    {% for source in data.sources %}
+                      <li><a href="{{ source }}" target="_blank" rel="noopener">{{ source }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p class="muted">No references returned.</p>
+                {% endif %}
+              </div>
+            </div>
+          {% else %}
+            <p class="muted">Submit a query to see a report here.</p>
+          {% endif %}
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

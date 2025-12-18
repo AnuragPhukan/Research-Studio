@@ -1,0 +1,14 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="36" fill="#F5EFE3" />
+  <rect x="72" y="72" width="1056" height="576" rx="28" fill="#FFFFFF" stroke="#E7DBC6" stroke-width="2" />
+  <rect x="120" y="140" width="380" height="36" rx="18" fill="#2B6F6A" opacity="0.15" />
+  <rect x="120" y="200" width="520" height="16" rx="8" fill="#28444D" opacity="0.25" />
+  <rect x="120" y="235" width="420" height="16" rx="8" fill="#28444D" opacity="0.2" />
+  <rect x="120" y="320" width="960" height="240" rx="22" fill="#F5EFE3" />
+  <rect x="150" y="350" width="880" height="16" rx="8" fill="#122C34" opacity="0.2" />
+  <rect x="150" y="380" width="780" height="16" rx="8" fill="#122C34" opacity="0.2" />
+  <rect x="150" y="410" width="840" height="16" rx="8" fill="#122C34" opacity="0.2" />
+  <rect x="150" y="440" width="760" height="16" rx="8" fill="#122C34" opacity="0.2" />
+  <text x="120" y="120" font-family="Space Grotesk, Avenir Next, sans-serif" font-size="20" fill="#122C34">UI Preview</text>
+  <text x="120" y="600" font-family="Space Grotesk, Avenir Next, sans-serif" font-size="14" fill="#28444D">Replace this placeholder with a real screenshot.</text>
+</svg>
