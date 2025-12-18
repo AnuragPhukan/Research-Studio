@@ -76,6 +76,6 @@ python main.py
 
 ## Screenshots
 
-![UI Preview](assets/screenshot.svg)
+![UI Preview 1](assets/Screenshot-1.svg)
 
-Replace `assets/screenshot.svg` with a real screenshot once you capture the UI.
+![UI Preview 2](assets/Screenshot-2.svg)
